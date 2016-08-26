@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<!-- 简体中文 -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- 优先使用最新版本的IE 和 Chrome 内核 -->
+	<title>分类</title>
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<!-- iOS 图标 -->
+	<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57x57-precomposed.png">
+	<link rel="shortcut icon" href="path/to/favicon.ico">
+	<!-- css,js -->
+	<link rel="stylesheet" href="./css/full.css">
+	<link rel="stylesheet" href="./css/styleeee.css">
+	<link rel="stylesheet" href="./css/swiper.css">
+	<script src="./js/frozen.js"></script>
+	<script src="./js/jquery-3.1.0.min.js"></script>
+	<!-- <script src="./js/zepto.min.js"></script> -->
+	<script src="./js/TouchSlide.1.1.js"></script>
+	<script src="./js/swiper.js"></script>
+</head>
+
+<style>
+	body{
+		overflow-y:hidden;
+	}
+	.swiper-container {
+		height: 100%;
+		width: 90px;
+		/*margin: 20px auto;*/
+	}
+	.swiper-slide {
+		text-align: center;
+		font-size: 18px;
+		background: #fff;
+		width:64px;
+		margin-right:0;
+		/* Center slide text vertically */
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
+</style>
+<body>
+	<div class="column rela">
+		<!-- 搜索框 Start ================================ -->
+		<div class="ui-searchbar-wrap ui-border-b">
+			<div class="ui-searchbar ui-border-radius rela ">
+				<i class="ui-icon-search"></i>
+				<div class="ui-searchbar-text">搜索</div>
+				<div class="ui-searchbar-input"><input value="" placeholder="搜索" autocapitalize="off"></div>
+				<i class="ui-icon-close"></i>
+			</div>
+			<button class="ui-searchbar-cancel">取消</button>
+		</div>
+		<!-- 搜索框 End ================================ -->
+		123
+		<!-- 横向滚动效果 Start -->
+		<!-- Swiper -->
+		<div class="swiper-container bgfff" style="z-index:999;">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide swiper-no-swiping">
+					<img src="./images/02.png" class="scroll-nav"  alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="./images/02.png" class="scroll-nav" alt="">
+				</div>
+			</div>
+		</div>
+		<!-- 横向滚动效果 End -->
+	</div>
+</body>
+<script>
+	var swiper = new Swiper('.swiper-container', {
+		// pagination: '.swiper-pagination',
+		slidesPerView: 0,
+		// mode:'vertical',
+		direction : 'vertical',
+		// paginationClickable: false,
+		// spaceBetween: -20,
+		// freeMode: true,
+		freeModeMomentumBounce : false,
+		freeModeMomentum:false,
+		centeredSlides:false,
+		resistance : false,
+		resistanceRatio : 0,
+	});
+
+
+
+
+	$('.ui-searchbar').click(function(){
+		$('.ui-searchbar-wrap').addClass('focus');
+		$('.ui-searchbar-input input').focus();
+	});
+	$('.ui-searchbar-cancel').click(function(){
+		$('.ui-searchbar-wrap').removeClass('focus');
+	});
+</script>
+</html>
